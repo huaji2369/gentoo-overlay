@@ -11,19 +11,17 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 RDEPEND="
-    dev-games/physfs
     media-libs/libsdl2
+    dev-games/physfs
 "
 DEPEND="${RDEPEND}"
 
 src_configure() {
     local mycmakeargs=(
         -DCMAKE_C_STANDARD=99
+        -DCMAKE_BUILD_TYPE=Release
     )
     cmake_src_configure
-}
-src_compile() {
-    cmake_src_compile
 }
 
 src_install() {

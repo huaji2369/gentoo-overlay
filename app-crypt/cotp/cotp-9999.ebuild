@@ -47,26 +47,6 @@ src_unpack() {
     fi
 }
 
-src_prepare() {
-    sed -i \
-        -e 's/git = "[^ ]*"/version = "*"/' \
-        -e '/rev =/d' \
-        Cargo.toml || die
-    default
-}
-
-src_configure() {
-    cargo_src_configure --no-default-features
-}
-
-src_compile() {
-    cargo_src_compile
-}
-
-src_test() {
-    cargo_src_test
-}
-
 src_install() {
     cargo_src_install
 	use converter && (
