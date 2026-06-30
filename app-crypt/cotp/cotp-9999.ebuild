@@ -5,7 +5,7 @@ RUST_MIN_VER="1.88.0"
 
 inherit cargo
 
-DESCRIPTION="Trustworthy, encrypted, command-line TOTP/HOTP authenticator app with import functionality"
+DESCRIPTION="command-line TOTP/HOTP authenticator app"
 HOMEPAGE="https://github.com/replydev/cotp"
 
 if [[ ${PV} == 9999 ]]; then
@@ -17,13 +17,22 @@ else
 		https://github.com/huaji2369/ebuild-crate-dist-replydev-cotp/releases/download/v${PV}/${P}-crates.tar.xz
         ${CARGO_CRATE_URIS}
     "
-    KEYWORDS="~amd64"
+    KEYWORDS="~amd64 ~arm64"
 fi
 LICENSE="GPL-3+"
 # Dependent crate licenses
 LICENSE+="
-	Apache-2.0 BSD-2 BSD Boost-1.0 ISC MIT MPL-2.0 Unicode-3.0
-	Unicode-DFS-2016 WTFPL-2 ZLIB
+	Apache-2.0
+    BSD-2
+    BSD
+    Boost-1.0
+    ISC
+    MIT
+    MPL-2.0
+    Unicode-3.0
+	Unicode-DFS-2016
+    WTFPL-2
+    ZLIB
 "
 SLOT="0"
 IUSE="converter"
@@ -32,11 +41,6 @@ RDEPEND="
     x11-libs/libxkbcommon
 "
 DEPEND="${RDEPEND}"
-
-
-pkg_setup() {
-    rust_pkg_setup
-}
 
 src_unpack() {
     if [[ ${PV} == 9999 ]]; then
