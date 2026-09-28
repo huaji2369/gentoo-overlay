@@ -3,13 +3,13 @@ EAPI=8
 CRATES=""
 if [[ ${PV} != 9999 ]]; then
     declare -A GIT_CRATES=(
-        [adb_client]='https://github.com/Kernel-SU/adb_client;d97a966435bebaa55017834869dec08150826aa7;adb_client-%commit%/adb_client'
+        [adb_client]='https://github.com/KernelSU2/adb_client;d97a966435bebaa55017834869dec08150826aa7;adb_client-%commit%/adb_client'
         [android-bootimg]='https://github.com/5ec1cff/android_bootimg;150425b027c76ea104c82e408571651f2181b2c2;android_bootimg-%commit%/android-bootimg'
-        [java-properties]='https://github.com/Kernel-SU/java-properties;42a4aa941b70ded2dd3be9e9f892471023e70229;java-properties-%commit%'
+        [java-properties]='https://github.com/KernelSU2/java-properties;42a4aa941b70ded2dd3be9e9f892471023e70229;java-properties-%commit%'
         [kernlog]='https://github.com/kstep/kernlog.rs;68caa7bf1e27baea35b00ebba786cafae0bca90f;kernlog.rs-%commit%'
-        [prop-rs-android]='https://github.com/Kernel-SU/ksu_props;6f5723105d8d4cacad31d83d343defbf032c7b33;ksu_props-%commit%/crates/prop-rs-android'
-        [prop-rs]='https://github.com/Kernel-SU/ksu_props;6f5723105d8d4cacad31d83d343defbf032c7b33;ksu_props-%commit%/crates/prop-rs'
-        [rustix]='https://github.com/Kernel-SU/rustix;4a53fbc7cb7a07cabe87125cc21dbc27db316259;rustix-%commit%'
+        [prop-rs-android]='https://github.com/KernelSU2/ksu_props;6f5723105d8d4cacad31d83d343defbf032c7b33;ksu_props-%commit%/crates/prop-rs-android'
+        [prop-rs]='https://github.com/KernelSU2/ksu_props;6f5723105d8d4cacad31d83d343defbf032c7b33;ksu_props-%commit%/crates/prop-rs'
+        [rustix]='https://github.com/KernelSU2/rustix;4a53fbc7cb7a07cabe87125cc21dbc27db316259;rustix-%commit%'
     )
 fi
 RUST_MIN_VER="1.91.0"

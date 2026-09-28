@@ -4,7 +4,7 @@ S=${DISTDIR}
 DESCRIPTION="The GeneralUser GS soundfont"
 HOMEPAGE="https://www.schristiancollins.com/generaluser"
 SRC_URI="
-    https://raw.githubusercontent.com/mrbumpy409/GeneralUser-GS/97049183643d5fc5a9322a69c5b09efb667c6c3aGeneralUser-GS.sf2
+    https://raw.githubusercontent.com/mrbumpy409/GeneralUser-GS/97049183643d5fc5a9322a69c5b09efb667c6c3a/GeneralUser-GS.sf2
 "
 LICENSE="GeneralUser-GS-V2"
 SLOT="0"
