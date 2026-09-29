@@ -75,6 +75,12 @@ src_unpack() {
 
 src_prepare() {
     default
+
+    #change crate repo link (upstream #85cab5f)
+    sed -i -e "s/Kernel-SU/KernelSU2/g" \
+    ${S}/Cargo.lock \
+    ${S}/userspace/*/Cargo.toml
+
     if [[ ${PV} != 9999 ]]; then
         for arch in x86_64 aarch64; do
             install -v -Dm644 "${DISTDIR}/ksuinit-${arch}" "${S}/userspace/ksud/bin/${arch}/ksuinit" 
